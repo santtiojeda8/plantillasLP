@@ -1,0 +1,27 @@
+/* src/styles/global.css */
+
+/* Variables CSS para una gestión de colores más sencilla */
+:root {
+  --color-primary: #ffcc00;
+  --color-secondary: #333333;
+  --color-accent: #1a1a1a;
+  --color-background-light: #f7f7f7;
+  --color-background-dark: #1a1a1a;
+  --color-text-light: #ffffff;
+  --color-text-dark: #333333;
+}
+
+/* Estilos globales básicos */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Definición del contenedor para el contenido principal */
+.container {
+  max-width: 1200px; /* Ancho máximo para el contenido en pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 1.5rem; /* Añade espacio a los lados en pantallas pequeñas */
+}

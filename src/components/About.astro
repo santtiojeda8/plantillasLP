@@ -1,0 +1,71 @@
+
+
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="/Images/young-fitness-instructor-reading-a-training-plan-in-royalty-free-image-1571064571.webp" alt="Imagen del entrenador" />
+      </div>
+      <div class="about-content">
+        <h2>Hola, soy Juan</h2>
+        <p>
+          Entrenador personal con más de 10 años de experiencia ayudando a personas como tú a
+          alcanzar sus metas de fitness. Mi enfoque se basa en la disciplina, la constancia y la
+          personalización, creando rutinas que se adaptan a tu estilo de vida y te permiten
+          disfrutar del proceso.
+        </p>
+        <p>
+          He ayudado a cientos de personas a transformar su cuerpo y su mentalidad. ¡Ahora es tu turno!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 5rem 0;
+    background-color: #f7f7f7; /* Un color de fondo suave para que se diferencie del Hero */
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      flex-direction: row;
+    }
+    .about-image {
+      flex: 1;
+    }
+    .about-content {
+      flex: 2;
+    }
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+ 
+</style>
