@@ -1,0 +1,45 @@
+---
+const testimonials = [
+  {
+    text: '"Desde que empecé a trabajar con ellos la venta de propiedades se me hizo mucho mas fácil, desde las visitas hasta la venta final"',
+    author: "Ana G.",
+    image: "/Image/OIP.webp",
+  },
+  {
+    text: '"No solo hicieron las tasaciones, también me ayudaron a vender mucho mas rápido mi propiedad"',
+    author: "Carlos R.",
+    image: "/Image/Hombre.webp",
+  },
+  {
+    text: '"Nunca pensé que vender mi casa sería tán fácil. Llevaba más de 6 meses intentando venderla por mi parte, pero ellos solo tardaron 1 mes!! La mejor inmobialiaria de todas"',
+    author: "Lucía P.",
+    image: "/Image/R.jpeg",
+  },
+];
+import "../styles/testimonios.css";
+import ButtonCTA from "./ButtonCTA.astro";
+---
+
+<div class="container-tst">
+  <h3>¿Qué piensan los clientes acerca de nosotros?</h3>
+
+  <div class="testimonials-grid">
+    {
+      testimonials.map((testimonial) => (
+        <div class="testimonial-card">
+          <p class="testimonial-text">{testimonial.text}</p>
+          <div class="testimonial-author">
+            <img
+              src={testimonial.image}
+              alt={testimonial.author}
+              class="author-img"
+            />
+            <p class="author-name">{testimonial.author}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <ButtonCTA />
+</div>
