@@ -1,0 +1,23 @@
+.container-in {
+  height: 35vh;
+  width: 100%;
+  background-color: #e6f0f8;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box; /*Hace que no aumente el tamaño del contenedor*/
+  padding: 10vw;
+  gap: 30px;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}

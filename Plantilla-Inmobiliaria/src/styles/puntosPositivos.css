@@ -1,0 +1,30 @@
+.container-pp {
+  height: auto;
+  width: 100%;
+  background-color: #e6f0f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  padding: 20px 12vw;
+  .img-pp{
+    width: 500px;
+  }
+
+  h3{
+    color: green;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1.3rem;
+    margin: 0;
+    li{
+        padding: 5px;
+    }
+  }
+}

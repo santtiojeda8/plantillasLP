@@ -1,0 +1,34 @@
+.container-bnf {
+  height: auto;
+  width: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .container-data {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+    .container-card {
+      width: 50vw;
+      box-sizing: border-box;
+      border: 1px solid green;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  h2 {
+    margin: 0;
+  }
+}
+
+i.fa-solid {
+  font-size: 30px;
+  color: green;
+}
