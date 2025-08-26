@@ -1,0 +1,21 @@
+.containerHeader {
+  background-color: #2d3e50;
+  height: 13vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .logoImg {
+    height: 13vh;
+    width: auto;
+  }
+
+  .containerText {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

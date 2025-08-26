@@ -1,0 +1,27 @@
+.containerBtn {
+  height: auto;
+  width: 30vw;
+  display: flex;
+  background-color: #cbd6e2;
+  color: var(--button-letter-color);
+  border: 2px solid orange;
+  padding: 10px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  button {
+    all: unset;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  .btnImg {
+    background: transparent;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.containerBtn:hover {
+  cursor: pointer;
+}

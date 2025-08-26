@@ -1,0 +1,22 @@
+.containerSer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+  .card {
+    color: white;
+    flex: 1 1 25vh; /* ancho mínimo */
+    max-width: 40vw;
+    min-width: 300px;
+    padding: 20px;
+    border: 2px solid white;
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
