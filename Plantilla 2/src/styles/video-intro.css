@@ -1,0 +1,46 @@
+/* Sección de Video */
+.video-section {
+    padding: 8rem 1.5rem; /* Más espacio vertical */
+    background-color: #ffffff; /* Un fondo blanco limpio */
+    text-align: center;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 0.75rem; /* Margen más ajustado al subtítulo */
+    color: #3e2723;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Línea decorativa para el título */
+.video-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc80;
+    border-radius: 2px;
+}
+
+.video-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 3rem; /* Más espacio entre el texto y el video */
+    color: #555;
+}
+
+.intro-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

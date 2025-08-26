@@ -1,0 +1,118 @@
+---
+// src/components/YouTubeEmbed.astro
+// Props:
+// id: El ID del video de YouTube (ej. "dQw4w9WgXcQ")
+// title: Título descriptivo para accesibilidad
+// class: Clases CSS opcionales para el contenedor
+const { id, title = "Video de YouTube", class: className } = Astro.props;
+
+// Genera la URL de la imagen de vista previa
+const thumbnailUrl = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+// URL del iframe
+const embedUrl = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+---
+
+<div class:list={['youtube-embed-container', className]}>
+  <div class="youtube-thumbnail" style={`background-image: url(${thumbnailUrl})`}>
+    <button class="play-button" aria-label={`Reproducir ${title}`}>
+      ▶
+    </button>
+  </div>
+  <iframe
+    class="youtube-iframe"
+    title={title}
+    width="560"
+    height="315"
+    src=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy"
+    data-src={embedUrl}
+    hidden
+  ></iframe>
+</div>
+
+<style>
+  .youtube-embed-container {
+    position: relative;
+    width: 100%;
+    /* Relación de aspecto 16:9 */
+    padding-bottom: 56.25%;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .youtube-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .youtube-thumbnail:hover {
+    opacity: 0.9;
+  }
+
+  .play-button {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Para centrar el triángulo */
+  }
+
+  .play-button:hover {
+    background-color: red;
+    transform: scale(1.1);
+  }
+
+  .youtube-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<script>
+  // Script para manejar la carga diferida
+  document.addEventListener('DOMContentLoaded', () => {
+    const containers = document.querySelectorAll('.youtube-embed-container');
+
+    containers.forEach(container => {
+      const playButton = container.querySelector('.play-button');
+      const iframe = container.querySelector('.youtube-iframe');
+      const thumbnail = container.querySelector('.youtube-thumbnail');
+
+      if (playButton && iframe && thumbnail) {
+        playButton.addEventListener('click', () => {
+          if (iframe instanceof HTMLIFrameElement) {
+            iframe.src = iframe.dataset.src || ''; // Carga el video
+            iframe.removeAttribute('hidden');
+            thumbnail.style.display = 'none'; // Oculta la miniatura
+          }
+        });
+      }
+    });
+  });
+</script>

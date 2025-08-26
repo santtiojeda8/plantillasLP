@@ -1,0 +1,30 @@
+---
+import '../styles/menu.css';
+
+const menuItems = [
+  { name: 'Espresso', price: '$2.50', description: 'Intenso y con cuerpo, el corazón de nuestros cafés.' },
+  { name: 'Latte', price: '$4.00', description: 'Espresso y leche vaporizada, con una fina capa de espuma.' },
+  { name: 'Cappuccino', price: '$4.25', description: 'El clásico italiano, con la proporción perfecta de espuma.' },
+  { name: 'Mocha', price: '$4.75', description: 'La mezcla perfecta de espresso, chocolate y leche.' },
+  { name: 'Pastel de Zanahoria', price: '$5.50', description: 'Pastel casero con glaseado de queso crema.' },
+  { name: 'Croissant', price: '$3.00', description: 'Crujiente por fuera, suave por dentro. ¡Perfecto para empezar!' },
+];
+---
+
+<section class="menu-section" id="menu">
+  <div class="menu-container">
+    <h2>Nuestro Menú</h2>
+    <p class="menu-description">Descubre nuestra variedad de bebidas y delicias. Hechas con ingredientes de alta calidad para deleitar tu paladar.</p>
+    <div class="menu-grid">
+      {menuItems.map(item => (
+        <div class="menu-item-card">
+          <div class="item-info">
+            <h3>{item.name}</h3>
+            <p class="price">{item.price}</p>
+          </div>
+          <p class="description">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+import '../styles/video-intro.css';
+import YouTubeEmbed from './YouTubeEmbed.astro'; // Importamos el nuevo componente
+---
+
+<section class="video-section">
+  <div class="video-container">
+    <div class="video-content">
+      <h2>Conoce la magia detrás de cada taza</h2>
+      <p>Nuestro equipo de baristas te muestra el arte y la dedicación que ponemos en cada preparación.</p>
+    </div>
+    
+    <YouTubeEmbed
+      id="lt5TbCznGao" // Reemplaza esto con el ID de tu video de YouTube
+      title="Video de presentación de Café Sol"
+    />
+    
+  </div>
+</section>

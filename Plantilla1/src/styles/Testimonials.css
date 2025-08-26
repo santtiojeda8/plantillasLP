@@ -1,0 +1,86 @@
+/* Sección de Testimonios */
+.testimonials-section {
+    padding: 6rem 1.5rem; /* Aumento el padding para más espacio vertical */
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 3.5rem;
+    color: #333;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1280px; /* Centra la cuadrícula en pantallas grandes */
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 2.5rem; /* Aumenta el padding para que el contenido respire */
+    border-radius: 12px; /* Borde más redondeado */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más sutil y elegante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px); /* Efecto de elevación sutil al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-text {
+    font-size: 1.15rem; /* Un poco más grande para mejor legibilidad */
+    line-height: 1.7; /* Mayor espacio entre líneas */
+    margin-bottom: 2.5rem; /* Aumenta el espacio con el autor */
+    font-style: italic;
+    color: #555;
+    position: relative;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 3rem;
+    color: #ccc;
+    position: absolute;
+}
+
+.testimonial-text::before {
+    top: -0.5rem;
+    left: 0;
+}
+
+.testimonial-text::after {
+    bottom: -1rem;
+    right: 0;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; /* Empuja el autor a la parte inferior de la tarjeta */
+}
+
+.author-img {
+    width: 70px; /* Tamaño de imagen aumentado */
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+    border: 3px solid #3498db; /* Borde de color de acento */
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1.1rem; /* Tamaño de fuente del nombre aumentado */
+    color: #333;
+}

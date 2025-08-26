@@ -1,75 +1,13 @@
-
+---
+import '../styles/Hero.css';
+---
 
 <section class="hero-section">
-  <div class="container">
-    <div class="content">
+  <div class="hero-container">
+    <div class="hero-content">
       <h1>Transforma tu cuerpo y mente</h1>
       <h2>En 12 semanas obtén el cuerpo que siempre quisiste y sin dejar de comer lo que te gusta</h2>
       <a href="#contacto" class="btn">Empezar ahora</a>
     </div>
   </div>
 </section>
-
-<style>
-  .hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/Images/Fondo.avif'); /* Asegúrate de tener la imagen en public/images */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-  }
-
-  /* Para oscurecer la imagen de fondo y que el texto sea legible */
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2; /* Para que el contenido esté por encima del oscurecimiento */
-  }
-
-  .content h1 {
-    font-size: clamp(2rem, 5vw, 4rem); /* Tamaño de fuente responsivo */
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .content h2 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    margin-bottom: 2rem;
-    font-weight: 400;
-  }
-
-  .btn {
-    display: inline-block;
-    background-color: #ffcc00; /* Color del botón de ejemplo */
-    color: #000;
-    padding: 0.75rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: #ffdb4d;
-  }
-</style>

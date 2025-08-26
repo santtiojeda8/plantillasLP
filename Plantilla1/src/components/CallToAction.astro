@@ -1,7 +1,9 @@
-
+---
+import '../styles/CallToAction.css';
+---
 
 <section class="cta-section">
-  <div class="container">
+  <div class="cta-container">
     <div class="cta-content">
       <h2>¿Listo para empezar tu transformación?</h2>
       <p>Es hora de tomar el control de tu salud y bienestar. Haz clic abajo para dar el primer paso.</p>
@@ -9,45 +11,3 @@
     </div>
   </div>
 </section>
-
-<style>
-  .cta-section {
-    padding: 5rem 0;
-    background-color: var(--color-background-dark); /* Fondo oscuro usando la variable */
-    color: var(--color-text-light); /* Texto claro usando la variable */
-    text-align: center;
-  }
-
-  .cta-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary); /* Color de acento usando la variable */
-  }
-
-  .cta-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-  
-  /* Estilos del botón, puedes mover esto a global.css para reutilizarlo fácilmente */
-  .btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-accent);
-    padding: 0.75rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: #ffdb4d; /* Un tono más claro al pasar el mouse */
-  }
-</style>

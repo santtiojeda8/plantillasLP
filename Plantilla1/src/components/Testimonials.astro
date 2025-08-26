@@ -1,31 +1,32 @@
 ---
-// Define los testimonios aquí para mayor organización
+import "../styles/Testimonials.css";
+
 const testimonials = [
-  {
-    text: '"Desde que empecé con el plan, he notado un cambio increíble. Las rutinas y la guía de nutrición son excelentes y fáciles de seguir."',
-    author: 'Ana G.',
-    image: '/Images/OIP.webp',
-  },
-  {
-    text: '"No solo he perdido peso, sino que también he ganado mucha energía y confianza. El seguimiento personalizado hace toda la diferencia."',
-    author: 'Carlos R.',
-    image: '/Images/Hombre.webp',
-  },
-  {
-    text: '"Nunca pensé que podría lograr estos resultados. La asesoría es top, siempre está ahí para resolver dudas y motivarme."',
-    author: 'Lucía P.',
-    image: '/Images/R.jpeg',
-  },
+    {
+        text: 'Desde que empecé con el plan, he notado un cambio increíble. Las rutinas y la guía de nutrición son excelentes y fáciles de seguir.',
+        author: 'Ana G.',
+        image: '/Images/OIP.webp',
+    },
+    {
+        text: 'No solo he perdido peso, sino que también he ganado mucha energía y confianza. El seguimiento personalizado hace toda la diferencia.',
+        author: 'Carlos R.',
+        image: '/Images/Hombre.webp',
+    },
+    {
+        text: 'Nunca pensé que podría lograr estos resultados. La asesoría es top, siempre está ahí para resolver dudas y motivarme.',
+        author: 'Lucía P.',
+        image: '/Images/R.jpeg',
+    },
 ];
 ---
 
 <section class="testimonials-section">
-  <div class="container">
+  <div class="testimonials-container">
     <h2>Lo que dicen mis clientes</h2>
     <div class="testimonials-grid">
       {testimonials.map(testimonial => (
         <div class="testimonial-card">
-          <p class="testimonial-text">{testimonial.text}</p>
+          <p class="testimonial-text">"{testimonial.text}"</p>
           <div class="testimonial-author">
             <img src={testimonial.image} alt={testimonial.author} class="author-img" />
             <p class="author-name">{testimonial.author}</p>
@@ -35,61 +36,3 @@ const testimonials = [
     </div>
   </div>
 </section>
-
-<style>
-  .testimonials-section {
-    padding: 5rem 0;
-    background-color: #f7f7f7;
-    text-align: center;
-  }
-
-  .testimonials-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #333;
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .testimonial-card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .testimonial-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    font-style: italic;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .author-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-  }
-
-  .author-name {
-    font-weight: bold;
-    font-size: 1rem;
-    color: #555;
-  }
-</style>

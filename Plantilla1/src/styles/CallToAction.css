@@ -1,0 +1,47 @@
+/* Sección de Llamada a la Acción (CTA) */
+.cta-section {
+    padding: 5rem 1.5rem; /* Añadido padding lateral para mejor espaciado en móviles */
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 900px; /* Aumentado a 900px para centrar mejor el contenido */
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Hace el título más adaptable en diferentes tamaños de pantalla */
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-weight: 700; /* Añadido para dar más peso visual al título */
+}
+
+.cta-content p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Ajuste similar para el subtítulo, más legible */
+    line-height: 1.6;
+    margin-bottom: 2.5rem; /* Aumentado el margen para separar más el texto del botón */
+}
+
+/* Estilos del botón */
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    padding: 1rem 3rem; /* Aumentado el padding para un botón más grande y visible */
+    border-radius: 50px; /* Borde más redondeado para un estilo moderno */
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Ligeramente más espaciado entre letras */
+    transition: all 0.3s ease-in-out; /* Transición para un efecto más suave al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad al botón */
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffdb4d; /* Mismo color de hover */
+    transform: translateY(-3px); /* Efecto de "elevación" al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más grande al elevarse */
+}

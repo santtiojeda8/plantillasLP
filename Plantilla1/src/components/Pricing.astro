@@ -1,111 +1,41 @@
 ---
-// Define los datos de los planes aquí 
+import "../styles/Pricing.css";
+
 const plans = [
-  {
-    name: 'Plan Básico',
-    price: '$200',
-    features: ['Acceso a rutinas', 'Soporte vía email', 'Guía de nutrición básica'],
-    buttonText: 'Comprar ahora',
-    isHighlighted: false, // Ya no está destacado
-  },
-  {
-    name: 'Plan Pro',
-    price: '$350',
-    features: ['Todo del Plan Básico', 'Rutinas personalizadas', 'Seguimiento semanal', 'Consultas por videollamada'],
-    buttonText: 'Comprar ahora',
-    isHighlighted: false, // Ahora es una tarjeta estándar
-  },
-  {
-    name: 'Plan Premium',
-    price: '$500',
-    features: ['Todo del Plan Pro', 'Plan de nutrición personalizado', 'Soporte 24/7', 'Asesoría ilimitada'],
-    buttonText: 'Comprar ahora',
-    isHighlighted: false, // Ya no está destacado
-  },
+    {
+        name: 'Plan Básico',
+        price: '$200',
+        features: ['Acceso a rutinas', 'Soporte vía email', 'Guía de nutrición básica'],
+    },
+    {
+        name: 'Plan Pro',
+        price: '$350',
+        features: ['Todo del Plan Básico', 'Rutinas personalizadas', 'Seguimiento semanal', 'Consultas por videollamada'],
+    },
+    {
+        name: 'Plan Premium',
+        price: '$500',
+        features: ['Todo del Plan Pro', 'Plan de nutrición personalizado', 'Soporte 24/7', 'Asesoría ilimitada'],
+    },
 ];
 ---
 
 <section class="pricing-section">
-  <div class="container">
+  <div class="pricing-container">
     <h2>Elige el plan que se adapte a ti</h2>
     <div class="pricing-grid">
       {plans.map(plan => (
-        <div class="plan-card"> <h3>{plan.name}</h3>
+        <div class="plan-card">
+          <h3>{plan.name}</h3>
           <p class="price">{plan.price}</p>
           <ul>
             {plan.features.map(feature => (
               <li>{feature}</li>
             ))}
           </ul>
-          <a href="#" class="btn">{plan.buttonText}</a>
+          <a href="#" class="btn">Comprar ahora</a>
         </div>
       ))}
     </div>
   </div>
 </section>
-
-<style>
-  .pricing-section {
-    padding: 5rem 0;
-    text-align: center;
-    background-color: #1a1a1a; /* Nuevo fondo oscuro */
-  }
-
-  .pricing-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #ffffff; /* Texto blanco para que contraste con el fondo oscuro */
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .plan-card {
-    background-color: #f0f0f0;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .plan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-
-  .plan-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffcc00;
-    margin-bottom: 1.5rem;
-  }
-
-  .plan-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
-  .plan-card li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-    /* El texto de los items se mantiene oscuro para que contraste con la tarjeta clara */
-  }
-
-  .plan-card li:last-child {
-    border-bottom: none;
-  }
-
-  .btn {
-    /* Mantenemos el mismo estilo de botón que definimos en el Hero. */
-  }
-</style>

@@ -1,0 +1,38 @@
+---
+import '../styles/testimonials.css';
+
+const testimonials = [
+  {
+    text: '“El mejor café que he probado en la ciudad. El ambiente es increíble y el servicio siempre es excelente.”',
+        author: 'Ana G.',
+        image: '/images/OIP.webp',
+  },
+  {
+    text: '“Sus pasteles son una delicia, y su latte art es simplemente espectacular. Mi lugar favorito para trabajar.”',
+        author: 'Carlos R.',
+        image: '/images/Hombre.webp',
+  },
+  {
+    text: '“Un rincón de paz en medio del caos. El aroma del café te envuelve al entrar. ¡Imprescindible!”',
+        author: 'Lucía P.',
+        image: '/images/R.jpeg',
+  },
+];
+---
+
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonials-grid">
+      {testimonials.map(testimonial => (
+        <div class="testimonial-card">
+          <p class="testimonial-text">{testimonial.text}</p>
+          <div class="testimonial-author">
+            <img src={testimonial.image} alt={testimonial.author} class="author-img" />
+            <p class="author-name">{testimonial.author}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

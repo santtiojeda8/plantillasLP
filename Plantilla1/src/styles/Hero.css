@@ -1,0 +1,68 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/Images/Fondo.avif'); /* Añadida superposición con gradiente para un mejor efecto */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1.5rem; /* Añadido padding para móviles */
+}
+
+/* Nota: La superposición oscura ahora está integrada en el 'background-image' para un código más limpio. */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Reducido el padding para una mejor consistencia */
+    position: relative;
+    z-index: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; /* Limita el ancho del texto para mejor legibilidad */
+}
+
+.content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Aumentado el tamaño máximo para más impacto */
+    margin-bottom: 1.5rem;
+    font-weight: 800; /* Fuente más gruesa para un título impactante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra de texto para mejorar la legibilidad */
+}
+
+.content h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem); /* Aumentado el tamaño para un mejor subtítulo */
+    margin-bottom: 3rem; /* Más espacio antes del botón */
+    font-weight: 500; /* Peso de fuente intermedio para el subtítulo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffc400; /* Tono de amarillo más vibrante */
+    color: #2c3e50; /* Color de texto oscuro para el botón */
+    padding: 1rem 3rem;
+    border-radius: 50px; /* Botón más redondeado y moderno */
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ffd740; /* Un tono más claro en hover */
+    transform: translateY(-5px); /* Un efecto de elevación más notable */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}

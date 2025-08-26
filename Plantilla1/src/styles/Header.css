@@ -1,0 +1,139 @@
+/* src/styles/Header.css */
+
+.main-header {
+    background-color: #2c3e50; /* Un azul oscuro, puedes ajustarlo */
+    color: #ecf0f1;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Fija el header al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    /* Aumentamos el tamaño de la fuente del logo */
+    font-size: 2.5rem; /* Aumentado de 2.2rem a 2.5rem */
+    font-weight: bold;
+}
+
+.logo img {
+    /* ¡Hacemos la imagen del logo considerablemente más grande! */
+    height: 70px; /* Antes 55px, ahora 70px */
+    width: 70px; /* Antes 55px, ahora 70px */
+    margin-right: 15px; /* Un poco más de espacio */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: #3498db; /* Un azul más claro para el hover */
+}
+
+/* Menú hamburguesa (oculto por defecto en desktop) */
+.menu-toggle {
+    display: none; /* Oculto en desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle .hamburger {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ecf0f1;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .main-nav.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 0.8rem 0;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.is-active .hamburger:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .menu-toggle.is-active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .hamburger:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+}
