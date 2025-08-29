@@ -1,0 +1,43 @@
+---
+import "../styles/Beneficios.css";
+import ButtonCTA from "./ButtonCTA.astro";
+const beneficios = [
+  {
+    title: "Optimización para conversiones",
+    text: "La estructura de toda la página esta pensada para vender",
+    img: "fa-solid fa-money-bill-transfer",
+    alt: "",
+  },
+  {
+    title: "Diseño responsive",
+    text: "Páginas perfectas para celulares, tablets y computadoras",
+    img: "fa-solid fa-tablet-screen-button",
+    alt: "",
+  },
+  {
+    title: "Carga rápida",
+    text: "Landing Pages optimizadas en rendimiento para ser las más rápidas",
+    img: "fa-solid fa-gauge-high",
+    alt: "",
+  },
+  {
+    title: "Adaptación total",
+    text: "Páginas toalmente apadtadas a la identidad de tu marca",
+    img: "fa-solid fa-palette",
+    alt: "",
+  },
+];
+---
+
+<div class="containerBeneficios">
+  {
+    beneficios.map((beneficios) => (
+      <div class="container-card">
+        <i class={beneficios.img} />
+        <h3>{beneficios.title}</h3>
+        <p class="testimonial-text">{beneficios.text}</p>
+      </div>
+    ))
+  }
+  <ButtonCTA />
+</div>
