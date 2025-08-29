@@ -1,0 +1,18 @@
+{
+  "name": "nuviodigital-lp",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/poppins": "^5.2.6",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "astro": "^5.13.3"
+  }
+}

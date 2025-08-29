@@ -1,0 +1,14 @@
+.containerCTA {
+  all: unset;
+  background-color: #2563eb;
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.containerCTA:hover {
+  cursor: pointer;
+}

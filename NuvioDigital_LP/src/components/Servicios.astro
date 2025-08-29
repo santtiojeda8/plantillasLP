@@ -1,0 +1,51 @@
+---
+import "../styles/Servicios.css";
+import ButtonCTA from "./ButtonCTA.astro";
+const services = [
+  {
+    title: "Landing Básica",
+    text: "Ideal si estás empezando y necesitas una presencia en línea sencilla pero efectiva.",
+    item1: "Una sección simple y un llamado a la acción",
+    item2: "Diseño limpio y optimizado para computadoras",
+    item3: "Dominio personalizado con el nombre de tu negocio",
+    item4: "Entrega rápida entre 3 y 5 días",
+    price: "US$ 250",
+  },
+  {
+    title: "Landing Avanzada",
+    text: "Perfecta para negocios o personas que buscan más funcionalidades y un diseño más personalizado.",
+    item1: "Múltiples secciones (Ejemplo: FAQ, About us, Servicios)",
+    item2: "Folmulario de contacto o más llamados a la acción",
+    item3: "Diseño optimizado para móviles, tablets y computadoras",
+    item4: "Entrega entre 5 y 9 días",
+    price: "US$ 450",
+  },
+  {
+    title: "Landing Premium",
+    text: "La solución completa para maximizar tus resultados.",
+    item1: "Diseño exclusivo y a medida para tu marca",
+    item2: "Animaciones y efectos visuales para una experiencia única",
+    item3: "Optimización SEO avanzada para mejor posicionamiento en Google",
+    item4: "Entrega entre 10 y 15 días",
+    price: "US$ 750",
+  },
+];
+---
+
+<div class="containerService" >
+  <h1>Nuestras Landing Pages</h3>
+  {
+    services.map((service) => (
+      <div class="containerItems">
+        <h2>{service.title}</h2>
+        <ul>
+          <li>{service.item1}</li>
+          <li>{service.item2}</li>
+          <li>{service.item3}</li>
+          <li>{service.item4}</li>
+        </ul>
+        <p>{service.price}</p>
+      </div>
+    ))
+  }
+</div>
