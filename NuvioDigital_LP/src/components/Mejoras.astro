@@ -1,0 +1,44 @@
+---
+import "../styles/Mejoras.css";
+import ButtonCTA from "./ButtonCTA.astro";
+const mejoras = [
+  {
+    icon: "fa-solid fa-bullseye",
+    title: "Más conversiones",
+    description:
+      "Diseñamos páginas optimizadas para captar la atención y guiar al usuario hacia la acción que tu negocio necesita.",
+  },
+  {
+    icon: "fa-solid fa-chart-line",
+    title: "Impulso en tus ventas",
+    description:
+      "Cada sección está pensada para convertir visitas en clientes, aumentando tus oportunidades de negocio.",
+  },
+  {
+    icon: "fa-solid fa-mobile-screen-button",
+    title: "Diseño responsive",
+    description:
+      "Tu landing se verá perfecta en celulares, tablets y computadoras, sin importar el dispositivo.",
+  },
+  {
+    icon: "fa-solid fa-rocket",
+    title: "Resultados rápidos",
+    description:
+      "Con una estructura clara y un diseño profesional, tu marca transmite confianza desde el primer momento.",
+  },
+];
+---
+
+<div class="containerMejora">
+  <h1>¿Como una landig puede potenciar tu negocio?</h1>
+  {
+    mejoras.map((mejora) => (
+      <div class="containerCard">
+        <i class={mejora.icon} />
+        <h3>{mejora.title}</h3>
+        <p>{mejora.description}</p>
+      </div>
+    ))
+  }
+  <ButtonCTA />
+</div>

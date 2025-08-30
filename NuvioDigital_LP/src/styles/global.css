@@ -48,7 +48,10 @@ h6 {
 /* Aplicar a párrafos, listas, spans y links */
 
 p,
-span,li {
+span,
+li,
+summary,
+details {
   font-family: var(--font-body);
 }
 

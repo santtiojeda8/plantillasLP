@@ -1,0 +1,44 @@
+---
+import "../styles/FAQ.css";
+const faqs = [
+  {
+    question: "¿Qué incluye una Landing Page?",
+    answer:
+      "Incluye diseño personalizado, adaptación a móviles, optimización para conversiones y entrega lista para publicar.",
+  },
+  {
+    question: "¿En cuánto tiempo se entrega?",
+    answer:
+      "Generalmente entre 5 y 10 días hábiles, dependiendo de la complejidad del proyecto.",
+  },
+  {
+    question: "¿Necesito tener hosting y dominio?",
+    answer:
+      "Podés usar uno que ya tengas o te asesoramos para contratar uno nuevo. También ofrecemos opciones de hosting básico.",
+  },
+  {
+    question: "¿Se puede actualizar la Landing después?",
+    answer:
+      "Sí, podés solicitarnos cambios o actualizaciones cuando lo necesites, incluso agregar secciones nuevas.",
+  },
+  {
+    question: "¿Ofrecen otros servicios además de Landing Pages?",
+    answer:
+      "Sí, pronto sumaremos desarrollo web completo, e-commerce y servicios de marketing digital.",
+  },
+];
+---
+
+<div class="containerFAQ">
+  <h1>Preguntas Frecuentes</h1>
+  {
+    faqs.map((faq) => (
+      <div class="containerDetails">
+        <details>
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      </div>
+    ))
+  }
+</div>
