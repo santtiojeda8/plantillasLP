@@ -55,6 +55,10 @@ details {
   font-family: var(--font-body);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 12px;
   width: 100%;

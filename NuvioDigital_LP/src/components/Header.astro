@@ -1,0 +1,38 @@
+---
+import "../styles/Header.css";
+---
+
+<nav class="containerNav">
+  <img src="/Images/Logo.svg" alt="logo de Nuvio Digital" class="logo" />
+
+  <ul class="navList" id="navList">
+    <li><a href="#soluciones">Soluciones</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#beneficios">Beneficios</a></li>
+    <li><a href="#faqs">FAQs</a></li>
+  </ul>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="46"
+    height="46"
+    fill="currentColor"
+    class="listIcon"
+    viewBox="0 0 16 16"
+    id="listIcon"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+    ></path>
+  </svg>
+</nav>
+
+<script>
+    const burger = document.querySelector('#listIcon');
+    const nav = document.querySelector('#navList');
+
+    burger?.addEventListener('click', () => {
+        nav?.classList.toggle('show')
+    });
+</script>
