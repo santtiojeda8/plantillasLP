@@ -5,7 +5,7 @@
   border-bottom: 1px solid white;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   position: relative;
   .logo {
@@ -48,6 +48,11 @@
   .containerNav {
     position: relative;
     padding: 0 2rem;
+    align-items: end;
+    height: 17vh;
+    .logo {
+      height: 10rem;
+    }
     .navList {
       display: flex;
       flex-direction: row;
@@ -55,6 +60,9 @@
       position: static; /* <-- volvemos al flujo normal */
       width: auto; /* <-- que ocupe solo lo necesario */
       background: transparent; /* sacás el color del dropdown */
+      li a {
+        font-size: 1.5rem;
+      }
     }
   }
   .listIcon {

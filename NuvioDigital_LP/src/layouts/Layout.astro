@@ -20,6 +20,14 @@ import "../styles/global.css";
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- ESTE SCRIPT RESETEA LA URL AL HACER REFRESH -->
+    <script>
+      window.addEventListener("load", () => {
+        if (window.location.hash) {
+          history.replaceState(null, "/", window.location.pathname);
+        }
+      });
+    </script>
     <title>Nuvio Digital</title>
   </head>
   <body>

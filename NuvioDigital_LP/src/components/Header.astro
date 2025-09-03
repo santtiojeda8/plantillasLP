@@ -29,10 +29,15 @@ import "../styles/Header.css";
 </nav>
 
 <script>
-    const burger = document.querySelector('#listIcon');
-    const nav = document.querySelector('#navList');
+  const burger = document.querySelector("#listIcon");
+  const nav = document.querySelector("#navList");
+  const ul = document.querySelector("ul");
 
-    burger?.addEventListener('click', () => {
-        nav?.classList.toggle('show')
-    });
+  burger?.addEventListener("click", () => {
+    nav?.classList.toggle("show");
+  });
+
+  ul?.addEventListener("click", () => {
+    nav?.classList.toggle("show");
+  });
 </script>

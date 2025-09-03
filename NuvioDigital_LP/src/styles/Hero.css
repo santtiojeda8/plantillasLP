@@ -20,3 +20,18 @@
     }
   }
 }
+
+@media (min-width: 640px) {
+  .containerHero {
+    padding: 0px 20vw;
+    height: 90vh;
+    .containerText {
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
